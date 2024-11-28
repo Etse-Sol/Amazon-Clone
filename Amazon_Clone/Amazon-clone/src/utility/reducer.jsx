@@ -2,7 +2,8 @@
 import {Type} from "./actiontype"
 
 export const intialState ={
-    basket:[]
+    basket:[],
+    user:null
 }
 
 export const reducer =(state,action)=>{
@@ -40,7 +41,12 @@ export const reducer =(state,action)=>{
                     basket:newBasket
                 }
        
-            
+            case Type.SET_USER:
+                return{
+                ...state,
+                user:action.user,
+                };
+
       
     
 
